@@ -1,5 +1,8 @@
 import dotenv from 'dotenv' ;
 import express from 'express' ;
+import { User } from '../models/user.models.js' ;
+import { Todo } from '../models/todo.models.js' ;
+
 
 
 dotenv.config() ;
@@ -11,6 +14,12 @@ const port = process.env.PORT || 3000 ;
 app.use(express.json()) ;
 
 app.post('/signup' , function (req,res){
+
+    let username = req.body.username ;
+    let password = req.body.password ;
+    let email = req.body.email ;
+
+    
 
 }) ;
 
